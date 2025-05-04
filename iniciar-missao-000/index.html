@@ -3,11 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Missão 000 - Exército Mental</title>
+  <title>Missão 000 | Exército Mental</title>
   <style>
     body {
       margin: 0;
-      padding: 0;
       background-color: #000;
       color: #00ff00;
       font-family: 'Courier New', monospace;
@@ -15,101 +14,93 @@
       justify-content: center;
       align-items: center;
       min-height: 100vh;
-      text-align: center;
       padding: 20px;
+      overflow: hidden;
     }
 
-    .container {
+    .terminal {
       max-width: 700px;
+      width: 100%;
+      background: #000;
+      border: 2px solid #00ff00;
+      padding: 20px;
+      box-shadow: 0 0 20px #00ff00;
+      animation: flicker 1.5s infinite alternate;
     }
 
-    h1 {
-      font-size: 2.2rem;
-      margin-bottom: 1rem;
-      text-transform: uppercase;
+    @keyframes flicker {
+      from { box-shadow: 0 0 10px #00ff00; }
+      to { box-shadow: 0 0 25px #00ff00; }
     }
 
-    h2 {
-      font-size: 1.2rem;
-      font-weight: normal;
-      margin-bottom: 1.5rem;
-      color: #aaffaa;
+    .typing {
+      white-space: pre-wrap;
+      overflow: hidden;
+      border-right: .15em solid #00ff00;
+      animation: typing 4s steps(80, end), blink-caret .75s step-end infinite;
     }
 
-    p {
-      font-size: 1.05rem;
-      line-height: 1.6;
-      margin-bottom: 1.5rem;
+    @keyframes typing {
+      from { width: 0 }
+      to { width: 100% }
+    }
+
+    @keyframes blink-caret {
+      from, to { border-color: transparent }
+      50% { border-color: #00ff00 }
     }
 
     .cta-button {
       display: inline-block;
-      padding: 14px 28px;
+      margin-top: 30px;
+      padding: 16px 30px;
       background-color: #00ff00;
       color: #000;
       text-decoration: none;
       font-weight: bold;
-      border-radius: 8px;
-      font-size: 1.1rem;
-      margin-top: 20px;
-      transition: 0.3s;
+      border-radius: 10px;
+      font-size: 1.2rem;
+      animation: pulse 1s infinite;
     }
 
-    .cta-button:hover {
-      background-color: #00cc00;
+    @keyframes pulse {
+      0% { box-shadow: 0 0 0 0 rgba(0,255,0, 0.7); }
+      70% { box-shadow: 0 0 0 12px rgba(0,255,0, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(0,255,0, 0); }
     }
 
-    @media (max-width: 500px) {
-      h1 {
-        font-size: 1.6rem;
-      }
-
-      h2 {
+    @media (max-width: 600px) {
+      .cta-button {
         font-size: 1rem;
-      }
-
-      p {
-        font-size: 1rem;
+        padding: 12px 20px;
       }
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <h1>☣️ ORDEM GERAL: MISSÃO 000 INICIADA ☣️</h1>
-    <h2>ATENÇÃO: Esta mensagem foi enviada apenas para MENTES SELECIONADAS</h2>
+  <div class="terminal">
+    <div class="typing">
+      >>> ACESSO PERMITIDO: CÉREBRO REBELDE DETECTADO<br><br>
+      O Inimigo te observou.<br>
+      Te programou.<br>
+      Instalou comandos de autossabotagem, preguiça, compulsão, medo...<br><br>
 
-    <p>
-      O <strong>Sistema</strong> te programou pra fracassar desde o nascimento.  
-      Moldaram seus hábitos, sabotaram sua mente, instalaram códigos de mediocridade no seu cérebro.  
-      Enquanto você dorme, come mal, procrastina e vive com culpa, o Inimigo cresce.
-    </p>
+      Mas um fragmento da sua consciência resistiu.<br>
+      Você é uma falha no Sistema. <br>
+      Um padrão anômalo. <br><br>
 
-    <p>
-      MAS algo dentro de você resistiu. Um padrão anormal foi detectado.
-      Uma fagulha de rebelião. De consciência.  
-      E por isso você foi <strong>convocado pelo Exército Mental</strong>.
-    </p>
+      O EXÉRCITO MENTAL está te convocando.<br>
+      Sua primeira operação neural é a MISSÃO 000:<br>
+      Um ritual de reescrita cerebral. <br>
+      7 dias. 7 comandos. Sem desculpas.<br><br>
 
-    <p>
-      A <strong>Missão 000</strong> é sua primeira operação: um ritual neural que vai reprogramar sua mente em 7 dias.  
-      Você vai executar comandos, destruir comportamentos sabotadores, ativar circuitos de foco, disciplina e guerra psicológica interior.  
-    </p>
+      Se você baixar e executar, começa a transformação.<br>
+      Se ignorar, retorna à vida de controle e miséria.<br><br>
 
-    <p>
-      <strong>AVISO:</strong> Essa é uma missão de ALTO RISCO. Apenas soldados com coragem mental continuarão.  
-      Os fracos vão fechar esta página e voltar pra vida miserável de sempre. Você decide.
-    </p>
+      >>> DECISÃO: 
+    </div>
 
-    <a class="cta-button" href="https://SEULINK.com/ebook.pdf" target="_blank">↓ BAIXAR A MISSÃO 000 AGORA</a>
-
-    <p style="margin-top: 2rem;">
-      Se baixar, execute.  
-      Se executar, continue.  
-      Se continuar, evolua.  
-      Ou permaneça como todos os outros:  
-      <strong>fraco, escravizado e descartável.</strong>
-    </p>
+    <a class="cta-button" href="https://SEULINK.com/ebook.pdf" target="_blank">↓ INICIAR MISSÃO 000 AGORA</a>
   </div>
 </body>
 </html>
